@@ -12,7 +12,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="variable",
-    version="0.0.1",
+    version="0.0.2",
     author="gtlawson",
     author_email="glawson014@gmail.com",
     description="Forward and Backward Variable Selection",
