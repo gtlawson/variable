@@ -8,7 +8,7 @@ This package executes the forward and backward selection procedures to aid in se
 
 The forward selection procedure starts with an equation containing no predictor varaibles, only a constant that must be added by the user.  To identify the first variable to include in the equation, the independent variable with the highest simple correlation to the response variable is selected and included in an OLS regression.  If An evaluation of the independent variable's p-value is completed, and if the variable proves significantly different from zero, it is retained in the equation and a review for a second variable is initiated.  To identify a second variable, a correlation with the remaining variables is completed against the residuals from the previous OLS regression.  The independent variable with the highest correlation to the residuals is selected as the second variable, which is included in a subsequent OLS regression.  If the p-value of this second variable proves significant from zero, this second variable is retained and the search for a third variable is initiated.  This process continues for all available variables.  
 
-The backward selection procedure starts with all variables including a constant that must be added by the user, and systematically removes the variable with the smallest y-value in each iteration.
+The backward selection procedure starts with all variables including a constant that must be added by the user, and systematically removes the variable with the smallest t-value in each iteration.
 
 To initiate the function, the user must specify the target variable (y) and the independent variable(s) (X).
 
