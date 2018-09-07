@@ -9,17 +9,17 @@ Created on Tue Jun 19 07:17:30 2018
 ###############################################################################
                                Initial Setup
 """
-#Identify original display settings and set as variable orig_setting for use in
-    #returning to to original display settings after code.  Set display options
-    #to optimal settings for printed output.
-orig_setting = pd.get_option('display.width')
-pd.set_option('display.width', 120)
-
 #import necessary packages
 import pandas as pd 
 import numpy as np
 import statsmodels.api as sm
 import math
+
+#Identify original display settings and set as variable orig_setting for use in
+    #returning to to original display settings after code.  Set display options
+    #to optimal settings for printed output.
+orig_setting = pd.get_option('display.width')
+pd.set_option('display.width', 120)
 
 #Combine dataframes for use in correlation
 df = pd.concat([y, X], axis=1)
@@ -188,7 +188,6 @@ def back(X,y):
             #the model are calculated as well as the r-squared value.
         model = sm.OLS(df[target], df[variable_list]).fit()
         model.summary()
-        resid = model.resid
         rsquared_result = model.rsquared
         
         #The following values from the current iteration of the model are 
